@@ -12,3 +12,13 @@ from gdrivedataset import loader
 file_id = "1RDAVsCCQCs1bxjq_2Q6qPlGeztnQ2AMD"
 loader.load_from_google_drive(file_id)
 ```
+
+결측치 확인하기
+```python
+def check_missing_value(df):
+  missing_values = df.isnull().sum().sort_values(ascending=False)
+  missing_percentage = (missing_values / len(df)) * 100
+  result = pd.concat([missing_values, missing_percentage], axis=1, keys=['Missing values', '% Missing'])
+  display(result)
+check_missing_value(train)
+```
