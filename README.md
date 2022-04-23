@@ -9,7 +9,7 @@
 
 from gdrivedataset import loader
 
-file_id = "1RDAVsCCQCs1bxjq_2Q6qPlGeztnQ2AMD"
+file_id = "구글드라이브 파일 id"
 loader.load_from_google_drive(file_id)
 ```
 
