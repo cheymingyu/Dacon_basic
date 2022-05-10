@@ -9,7 +9,7 @@
 
 from gdrivedataset import loader
 
-file_id = "1RDAVsCCQCs1bxjq_2Q6qPlGeztnQ2AMD"
+file_id = "구글드라이브 파일 id"
 loader.load_from_google_drive(file_id)
 ```
 
@@ -21,4 +21,14 @@ def check_missing_value(df):
   result = pd.concat([missing_values, missing_percentage], axis=1, keys=['Missing values', '% Missing'])
   display(result)
 check_missing_value(train)
+```
+
+데이터프레임 행/열 전부 표시하기
+```python
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+
+# 직접 지정
+pd.options.display.columnss = 10
+pd.options.display.max_rows = 10
 ```
